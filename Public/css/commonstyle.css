@@ -1,0 +1,275 @@
+  /* ===============
+ * 重新定义Html元素
+ * =============== */
+html, body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, pre, form,hr,p, blockquote, fieldset, input { 
+	padding: 0; 
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, em, strong, table, th, td { 
+	font-size: 1em; 
+	font-style: normal; 
+	font-weight: normal;
+}
+strong { 
+	font-weight: bold;
+}
+ul, ol { 
+	list-style: none outside none;
+}
+fieldset, img { 
+	border: medium none;
+}
+caption, th { 
+	 text-align: left;
+}
+table { 
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body { 
+	font: 12px/150% Arial,Verdana,"宋体"; 
+	color: #666;
+	background: #fff none repeat scroll 0 0;
+	margin: 0;
+	padding: 0;
+}
+a { 
+	color: #555; 
+	outline: medium none;
+}
+a:link,
+a:visited,
+a:active { 
+	text-decoration: none;
+}
+a:hover { 
+	color: #24dfc2; 
+	text-decoration: none;
+}
+i, cite, em { 
+	font-style: normal;
+}
+
+/* ==========================
+ * 常用宽度、高度、边距、边框属性
+ * ========================== */
+.w {
+	 width: 100%
+}
+.h {
+	height: 100%;
+}
+.w-none {
+	width: 0;
+}
+.h-none {
+	height: 0;
+}
+/*页面整体宽度控制*/
+.fl { 
+	float: left;
+}
+.fr { 
+	float: right;
+}
+.block { 
+	display: block;
+	zoom: 1;
+}
+.inline-block{
+	display: inline-block;
+}
+.none { 
+	display: none;
+}
+.text-left{
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.b{ 
+	font-weight: bold;
+}
+.cl {
+	clear: left;
+}
+.cr {
+	clear: right;
+}
+.cb {
+	clear: both;
+}
+.text-white{
+	color: #fff;
+}
+.text-black{
+	color:#000;
+}
+.text-middle {
+	color: #888;
+}
+.text-light {
+	color: #ccc;
+}
+.text-special{
+	color:#24dfc2;
+}
+.text-subspecial {
+	color: #ff573a;
+}
+.del {
+	text-decoration: line-through;
+}
+.disabled {
+	background-color: #aaa;
+}
+.bground-special {
+	background-color: #24dfc2;
+}
+.bground-white {
+	background-color:#fff;
+}
+.spliter {
+	border-left:1px solid #aaa;
+}
+.clearfix:after { 
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden; 
+}
+.over-hidden {
+	overflow: hidden;
+}
+.col-1 {
+	width: 10%;
+}
+.col-2 {
+	width:20%;
+}
+.col-3 {
+	width: 30%;
+}
+.col-4 {
+	width: 40%;
+}
+.col-5 {
+	width: 50%;
+}
+.col-6 {
+	width: 60%;
+}
+.col-7 {
+	width: 70%;
+}
+.col-8 {
+	width: 80%;
+}
+.col-9 {
+	width: 90%;
+}
+.mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(10,10,10,.6);
+    z-index: 99;  
+}
+.z-99 {
+	z-index: 99;
+}
+.info-tips {
+	padding: 6px 12px;
+	position: fixed;
+	background: rgba(1,1,1,.6);
+	border-radius: 5px;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+.center {
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	-webkit-transform: translate3D(-50%,-50%,0);
+	-ms-transform: translate3D(-50%,-50%,0);
+	-moz-transform: translate3D(-50%,-50%,0);
+	-o-transform: translate3D(-50%,-50%,0);
+	transform: translate3D(-50%,-50%,0);
+	z-index: 100;
+}
+.vertical-center {
+	top: 50%;
+	position: absolute;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	z-index: 100;
+}
+.horizon-center {
+	left: 50%;
+	position: absolute;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 100;
+}
+img.arrow-right {
+	width: 14px;
+	height: 14px;
+}
+.page {
+	padding-left: 13px;
+	margin: 20px 0;
+}
+.page a {
+	width: 66px;
+	height: 25px;
+	border: 1px solid #24dfc2;
+	display: inline-block;
+	margin: 0 2px;
+	text-align: center;
+	border-radius: 2px;
+	padding-top: 3px;
+	color: #24dfc2;
+}
+.page span {
+	margin: 0 5px;
+	font-size: 15px;
+	color: #888;
+}
+.pos-relative {
+	position: relative;
+}
+.pos-fixed {
+	position: fixed;
+}
+.pos-absolute {
+	position: absolute;
+}
+.swipe {
+	overflow: hidden;
+	visibility: hidden;
+	position: relative;
+}
+.swipe-wrap {
+	overflow: hidden;
+	position: relative;
+}
+.swipe-wrap > figure {
+	float: left;
+	width: 100%;
+	position: relative;
+}

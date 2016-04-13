@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="stylesheet" href="__PUBLIC__/assets/css/amazeui.min.css">
+		<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/commonstyle.css" />
+		<link rel="icon" href="/fuwebapp/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/style.css"/>
+		
+		<style>
+			body {
+				background: #fafafa;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="goodsinfo-head" class="w text-white">
+			<div class="head-top bground-special">
+				<span class="fl history-back glyphicon glyphicon-circle-arrow-left"></span>
+				<span class="head-title">商品详情</span>			
+				<img id="share" src="__PUBLIC__/img/icon/share1.png"  alt="" class="fr">
+			</div>
+		</div>
+		<div>
+			<div id="img-head-show">
+				<img src="{$goodsInfo.img_url}" alt="">
+			</div>
+			<div id="goods-info-detailed">
+				<div id="goods-info-name" class="clearfix">
+					<div class="fl col-8">
+						<h1 class="name b w text-left">
+							{$goodsInfo.name}
+						</h1>
+						<p class="message w text-left">
+							{$goodsInfo.message}
+						</p>
+					</div>
+					<div class="fr col-2">
+					    <if condition="$avgGrade eq 0">
+					   	    <p class="score">暂无评分</p>
+					   	<else/><p class="score">{$avgGrade}分</p>
+					    </if>			
+						<p class="text-light">销量: {$goodsInfo.sale_number}</p>
+					</div>
+				</div>
+				<div id="goods-info-price" class="text-left">
+				    <if condition="$goodInfo.is_discount eq 1">
+				    	<span class="discount-price">
+				    		￥{$goodsInfo.discount_price}
+				    	</span>
+				    	<span class="bef-price">
+				    		￥{$goodsInfo.price}
+				    	</span>
+				    	<span class="text-subspecial">
+				    		(省<?php
+				    			echo $goodsInfo['price'] - $goodsInfo['discount_price'];
+				    		?>元)
+				    	</span>
+				    <else/>	<span class="discount-price">￥{$goodsInfo.price}</span>
+				    </if>
+					
+				<!-- 	<span class="text-center inline-block bground-special">
+						减
+					</span> -->
+				</div>
+			</div>
+			<div id="goods-info-number" class="clearfix">
+				<span class="fl">选择数量</span>
+				<img class="arrow-right fr" src="__PUBLIC__/img/icon/forwardarrow.jpg" alt="">
+			</div>
+			<div class="mask none">
+				
+			</div>
+			<div id="goods-info-number-select" class="none">
+				<div class="number-head clearfix">
+					<img src="{$goodsInfo.img_url}" alt="">
+					<div class="fr w text-left">
+						<span class="discount-price">
+							￥{$goodsInfo.discount_price}
+						</span>
+						<span class="bef-price">
+							￥{$goodsInfo.price}
+						</span>
+						<span class="text-subspecial">
+							(省<?php
+								echo $goodsInfo['price'] - $goodsInfo['discount_price'];
+							?>元)
+						</span>
+					</div>
+					
+				</div>
+				<div class="number-body">
+					<div class="clearfix">
+						<span class="fl">购买数量</span>
+						<div class="fr">
+							<a class="sub-goods" data-orderId="{$goodsInfo.order_id}">-</a>
+							<input type="text" id="{$goodsInfo.order_id}" disabled="disabled" class="goods-count" value="1">
+							<a class="add-goods">+</a>
+						</div>
+					</div>
+					<div class="addcart-buynow">
+						<span class="glyphicon glyphicon-shopping-cart" data-food-id="{$goodsInfo.food_id}"></span>
+						<span class="spliter"></span>
+						<button class="buy-now" data-food-id="{$goodsInfo.food_id}">立即购买</button>
+					</div>
+				</div>
+			</div>			
+			<div id="goods-info-mark">
+				<div class="mark-head">
+					<span>商品评价({$commentCount})</span>
+				</div>
+				<div id="mark-detailed">
+					<ul>
+						<foreach name="commentInfo" item="comment">
+						<li>
+							<div class="clearfix">
+								<div class="mark-detailed-name fl col-5">
+									<img src="{$comment.img_url}" alt="">
+									<span>
+										<?php
+											if ($comment['is_hidden'] != '0') {
+												echo '匿名评价';
+											}
+											else {
+												echo $comment['nickname'];
+											}
+										?>
+									</span>
+								</div>
+								<div class="mark-detailed-star col-5 fl">
+									<span 
+									<?php
+										if ($comment['grade'] >= 1) {
+											echo 'class="glyphicon glyphicon-star text-subspecial"';
+										}
+										else {
+											echo 'class="glyphicon glyphicon-star-empty text-light"';
+										}
+									?>
+									></span>
+									<span
+									<?php
+										if ($comment['grade'] >= 2) {
+											echo 'class="glyphicon glyphicon-star text-subspecial "';
+										}
+										else {
+											echo 'class="glyphicon glyphicon-star-empty text-light"';
+										}
+									?>
+									></span>
+									<span
+									<?php
+										if ($comment['grade'] >= 3) {
+											echo 'class="glyphicon glyphicon-star text-subspecial"';
+										}
+										else {
+											echo 'class="glyphicon glyphicon-star-empty text-light"';
+										}
+									?>
+									></span>
+									<span
+									<?php
+										if ($comment['grade'] >= 4) {
+											echo 'class="glyphicon glyphicon-star text-subspecial"';
+										}
+										else {
+											echo 'class="glyphicon glyphicon-star-empty text-light"';
+										}
+									?>
+									></span>
+									<span
+									<?php
+										if ($comment['grade'] >= 5) {
+											echo 'class="glyphicon glyphicon-star text-subspecial"';				
+										}
+										else {
+											echo 'class="glyphicon glyphicon-star-empty text-light"';
+										}
+									?>
+									></span>
+							
+									<span class="goods-grade-score text-subspecial">
+										
+										<?php
+											if($comment['grade'] == null){
+												echo "0";
+											}
+											else {
+												echo $comment['grade'];
+											}
+										 ?>分
+									</span>
+								</div>
+							</div>
+							<div class="mark-detailed-info">
+								<span>{$comment.comment}</span>
+							</div>
+							<div class="mark-detailed-time text-middle">
+								<span>{$comment.date}</span>
+								数量：<span>{$comment.order_count}</span>
+							</div>
+						</li>
+					</foreach>
+					</ul>
+				</div>
+			</div>
+			<div class="buy-now-wrapper">
+				<div id="goods-info-buy-now" class="addcart-buynow">
+					<span class="glyphicon glyphicon-shopping-cart" data-food-id="{$goodsInfo.food_id}"></span>
+					<span class="spliter"></span>
+					<button class="buy-now" data-food-id="{$goodsInfo.food_id}">立即购买</button>
+				</div>
+			</div >
+		</div>
+		
+		<script type="text/javascript" src="__PUBLIC__/script/plugins/jquery-1.11.2.js"></script>
+        <script type="text/javascript">
+             $loginUrl="{:U('/Home/Login/login')}";
+        </script>
+		<script src="__PUBLIC__/script/common.js"></script>
+		<script src="__PUBLIC__/script/goodsinfo.js"></script>
+		<script src="__PUBLIC__/assets/js/amazeui.min.js"></script>
+		<script src="__PUBLIC__/assets/js/analytics.js"></script>
+		<script	type="text/javascript">
+		  $("#share").on('click',function(){
+              jQuery.AMUI.share.open();
+		  });
+		</script>
+	</body>
+</html>

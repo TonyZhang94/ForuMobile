@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>For优 确认订单</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />	
+		<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/commonstyle.css" />
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style-y.css" />
+		<link rel="icon" href="/fuwebapp/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="orderconfirm-head">
+			<span class="glyphicon text-special glyphicon-circle-arrow-left fl history-back"></span>
+			<span>确认订单</span>
+		</div>
+		<div id="order-confirm-location" data-rank="{$defaultAddress.rank}">
+			<div class="consumer-info w">
+				<span class="glyphicon glyphicon-user"></span>
+				<span class="consumer-name">{$defaultAddress.name}</span>
+				<span class="consumer-phone">{$defaultAddress.phone_id}</span>	
+			</div>
+			<div class="consumer-info-add w">
+				<span class="glyphicon  glyphicon-map-marker glyadd text-special"></span>
+				<span class="consumer-address">{$defaultAddress.address}</span>
+				<img src="__PUBLIC__/img/icon/forwardarrow.jpg" alt="">
+			</div>
+		</div>
+		<div class="orderconfirm-goodsdetail w">
+			<ul id="orderconfirm-goods" data-orderIds="{$orderIds}">
+				<input class="together-id-none none" value="{$together_id}"/>
+				<foreach name="goodsInfo" item="goods">
+					<li>
+						<div class="orderconfirm-goods clearfix">
+							<div class="orderconfirm-goodsimg">
+								<img src="{$goods.img_url}" />
+							</div>
+							<div class="orderconfirm-goods-txt">
+								<p class="goods-txt-name">{$goods.name}</p>
+								<p class="goods-txt-intro">{$goods.message}</p>
+								<if condition="$goods.is_full_discount eq 1">
+									<div class="full-discount-wrapper">
+										<span class="full-discount">
+											减
+										</span>
+										<span>
+											<foreach name="preferential" item="vi">
+												满{$vi.need_number}减{$vi.discount_num}&nbsp;
+											</foreach>
+										</span>
+									</div>
+								</if>
+								<div class="bo">
+									<div id="price-present" class="fl">
+										<span class="orderconfirm-price fl discount-price">￥{$goods.discount_price}</span> 
+										<span class="orgin-price fl bef-price">￥{$goods.price}</span>
+									</div>
+									<div id="order-goods-count" class="fr">
+										<a class="sub-goods" data-orderId="{$goods.order_id}">-</a>
+										<input class="goods-count" type="text" id="{$goods.order_id}" value="{$goods.order_count}" disabled="true">
+										<a class="add-goods" data-orderId="{$goods.order_id}">+</a>	
+									</div>				
+								</div>
+							</div>
+						</div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+		<div id="arr-time-mask" class="mask none">
+			<div id="arr-time" class="center">
+				<h1>请选择送达时间</h1>
+				<ul>
+					<li class="active">立即送出</li>
+				</ul>
+			</div>
+		</div>
+		<div class="orderconfirm-arrivetime w">
+			<span class="fl">送达时间</span>
+			<img src="__PUBLIC__/img/icon/forwardarrow.jpg" alt="">
+			<span class="fr arrive-time">立即送达</span>
+		</div>
+		<div class="payment-orderconfirm w">
+			<div class="payment-method-oc">
+				选择支付方式
+			</div>
+			<div class="">
+				<form action>
+					<div class="radio">
+					   <label>
+					      <input type="radio" name="pay_way" id="" 
+					         value="alipay_wap" checked> 支付宝支付<span>
+					         <img src="__PUBLIC__/img/alipay.png" />
+					         </span>
+					   </label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="orderconfirm-message">
+			<textarea  placeholder="留言备注" rows="5"></textarea>
+		</div>
+		
+		<div id="select-location-body">
+			<div class="orderconfirm-head">
+				<span class="glyphicon text-special glyphicon-circle-arrow-left fl history-back-temp"></span>
+				<span>选择地址</span>
+			</div><!--register-head-->
+			<ul class="w over-hidden">
+				<foreach name="address" item="v">
+					<li id="{$v['rank']}" 
+					<?php 
+						if($v['tag'] == 0) {
+							echo 'class="bground-white clearfix active">';
+						}
+						else {
+							echo 'class="bground-white clearfix">';
+						}
+					 ?>
+						<div class="fl w">
+							<span class="location-name">{$v.name}</span>
+							<span  class="location-phone">{$v.phone}</span>
+							<p class="text-middle location-address">{$v.address}</p>
+						</div>
+					</li>
+				</foreach>
+			</ul>
+		</div>
+
+		<div class="orderconfirm-totalamount">
+			合计:￥<span id="settle-dprice">{$price.dPrice}</span> <span class="orgin-price">
+			￥<span id="settle-price">{$price.Price}</span></span>
+			（已节省￥<span id="settle-save">{$price.save}</span>）
+		</div>
+		<div class="orderconfirm-btn-pay" >
+			<button class="btn register-info-submit-btn">
+					立即支付
+			</button>
+		</div>
+		
+		<script type="text/javascript" src="__PUBLIC__/script/plugins/jquery-1.11.2.js"></script>
+		<script type="text/javascript">
+           var $orderIds=$("#orderconfirm-goods").attr("data-orderIds");
+           var $payUrl="{:U('/Home/ShoppingCart/payAtOnce')}";
+		</script>
+		<script src="__PUBLIC__/script/common.js"></script>
+		<script src="__PUBLIC__/script/pingpp_pay.js"></script>
+		<script src="__PUBLIC__/script/orderconfirm.js"></script>
+	</body>
+</html>

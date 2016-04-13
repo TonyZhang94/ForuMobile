@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>For优 商品分类</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />	
+		<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/commonstyle.css" />
+		<link rel="icon" href="/fuwebapp/favicon.ico" type="image/x-icon" />
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style-y.css" />
+	</head>
+	<body>
+		<div class="searchout-head w">
+			<div class="head-top background-special">
+				<span class="fl text-special history-back glyphicon glyphicon-circle-arrow-left"></span>
+				<span class="head-title">搜索结果</span>
+			</div>
+		</div>
+		
+		<div id="search-standard" class="w">
+			<ul>
+				<switch name="std">
+				    <case value="0">
+						<li class="active" data-key="0"><a href="{:U('Commodity/searchoutcome',array('std'=>0,'key'=>$key))}">综合</a></li>	
+						<li data-key="1"><a href="{:U('Commodity/searchoutcome',array('std'=>1,'key'=>$key))}">销量</a></li>
+						<li data-key="2"><a href="{:U('Commodity/searchoutcome',array('std'=>2,'key'=>$key))}">价格</a></li>
+				    </case>
+				    <case value="1">
+						<li data-key="0"><a href="{:U('Commodity/searchoutcome',array('std'=>0,'key'=>$key))}">综合</a></li>	
+						<li class="active" data-key="1"><a href="{:U('Commodity/searchoutcome',array('std'=>1,'key'=>$key))}">销量</a></li>
+						<li data-key="2"><a href="{:U('Commodity/searchoutcome',array('std'=>2,'key'=>$key))}">价格</a></li>
+				    </case>
+				    <case value="2">
+						<li data-key="0"><a href="{:U('Commodity/searchoutcome',array('std'=>0,'key'=>$key))}">综合</a></li>	
+						<li data-key="1"><a href="{:U('Commodity/searchoutcome',array('std'=>1,'key'=>$key))}">销量</a></li>
+						<li class="active" data-key="2"><a href="{:U('Commodity/searchoutcome',array('std'=>2,'key'=>$key))}">价格</a></li>
+				    </case>
+				    <default />
+				    	<li class="active"  data-key="0"><a href="{:U('Commodity/searchoutcome',array('std'=>0,'key'=>$key))}">综合</a></li>	
+				    	<li data-key="1"><a href="{:U('Commodity/searchoutcome',array('std'=>1,'key'=>$key))}">销量</a></li>
+				    	<li data-key="2"><a href="{:U('Commodity/searchoutcome',array('std'=>2,'key'=>$key))}">价格</a></li>
+				</switch>
+			</ul>
+		</div>
+			
+		<div class="body-y" data-key="{$key}">	
+			<foreach name="goodlist" item="vi">
+				<a href="{:U('Commodity/goodsinfo',array('food_id'=>$vi['food_id']))}">
+					<div class="goodsclassify-goodsdetail clearfix">
+						<div class="goodsclassify-goodsimg" data-foodid="{$vi.food_id}">
+							<img src="{$vi.img_url}" />
+						</div>
+
+						<div class="goodsclassify-goods-txt">
+						
+							<div class="goods-txt-name">
+								{$vi.name}
+							</div>
+							<div class=" goods-txt-intro">
+								{$vi.message}
+							</div>
+							
+							<div>
+								<div class="fl">
+									<div class="goodsclassify-price fl discount-price">
+										￥{$vi.discount_price}
+									</div> 
+									<span class="orgin-price fl bef-price"> 	￥{$vi.price}
+									</span>
+								</div>
+								<div class="ri">
+									<div class="goodsclassify-sales">	
+										销量：{$vi.sale_number}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</foreach>		
+		</div>	
+		<div class="msg-page">
+			<div class="page">{$page}</div>
+		</div>
+		<!-- <include file='App/Home/View/Common/commonnav1.html'/> -->
+		
+		<script type="text/javascript" src="__PUBLIC__/script/plugins/jquery-1.11.2.js"></script>
+		<script src="__PUBLIC__/script/common.js"></script>
+		<script src="__PUBLIC__/script/searchoutcome.js"></script>
+	</body>
+</html>

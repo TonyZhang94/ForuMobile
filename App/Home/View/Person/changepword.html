@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="icon" href="/fuwebapp/favicon.ico" type="image/x-icon" />
+		<link href="__PUBLIC__/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/commonstyle.css" />
+		<link type="text/css" rel="stylesheet" href="__PUBLIC__/css/style.css" />
+	
+	</head>
+	<body>
+		<div id="changepassword-head" >
+			<div class="head-top bground-special text-white">
+				<span class="fl history-back glyphicon glyphicon-circle-arrow-left"></span>
+				<span class="head-title">修改密码</span>
+			</div>
+		</div>
+		<form id="change-password-form" action="{:U('Person/saveNewPWord')}">
+			<div class="user-info-input">
+				<span class="glyphicon glyphicon-lock"></span>
+				<span class="spliter"></span>
+				<input type="password" name="pre-password" placeholder="原密码">
+			</div>
+			<div class="user-info-input">
+				<span class="glyphicon glyphicon-lock"></span>
+				<span class="spliter"></span>
+				<input type="password" name="new-password" placeholder="新密码">
+			</div>
+			<div class="user-info-input">
+				<span class="glyphicon glyphicon-lock"></span>
+				<span class="spliter"></span>
+				<input type="password" name="confirm-password" placeholder="确认密码">
+			</div>
+			<input id="chanpword-button" type="submit" value="提交">
+		</form>
+		
+		<div class="info-tips center none">
+		</div>
+
+	<script type="text/javascript" src="__PUBLIC__/script/plugins/jquery-1.11.2.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/script/plugins/jquery.validate.js"></script>
+	<script src="__PUBLIC__/script/common.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/script/changepword.js"></script>
+	</body>
+</html>
