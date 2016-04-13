@@ -5,7 +5,7 @@ $(document).ready(function(){
 	});
 	// $("#search-standard li").click(function(){
 	// 	$.ajax({
-	// 		url:'/fuwebapp/index.php/Home/Commodity/getgoodlist/std/'+$(this).attr("data-key")+'/key/'+$(".body-y").attr("data-key"),
+	// 		url:'/foruMobile/index.php/Home/Commodity/getgoodlist/std/'+$(this).attr("data-key")+'/key/'+$(".body-y").attr("data-key"),
 	// 		success:function(data) {
 	// 			if(data.result != 0){				
 	// 				var goodsList = data['goodList'];
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	// 							+ "</div> </div>";
 	// 					$("<div></div>").html(htmlString)
 	// 						.appendTo($goodtxt);
-	// 					var $awrapper = $("<a href='fuwebapp/index.php/Home/Commodity/goodsinfo/food_id/"+goodsList[i].food_id+"'></a>");
+	// 					var $awrapper = $("<a href='foruMobile/index.php/Home/Commodity/goodsinfo/food_id/"+goodsList[i].food_id+"'></a>");
 	// 					$goodsdetail.append($goodtxt)
 	// 					.appendTo($awrapper);
 	// 					$(".body-y").append($awrapper);

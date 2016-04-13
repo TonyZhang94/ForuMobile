@@ -30,7 +30,7 @@ class OrderManageController extends Controller{
      * 订单管理
      * @return [type] [description]
      */
-	public function orderManage(){
+	public function ordermanage(){
 		$campusId=session('campusID');
         if($campusId==null){
             $campusId=1;

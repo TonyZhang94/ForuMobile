@@ -19,7 +19,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type:"POST",
-			url:"/fuwebapp/index.php/Home/Commodity/addToShopCart",
+			url:"/foruMobile/index.php/Home/Commodity/addToShopCart",
 			data:{order_count:$count,food_id:$food_id},
 			success:function(result){
 				if (result['result'] == 2) {
@@ -41,12 +41,12 @@ $(document).ready(function(){
 
 		$.ajax({
 			type:"POST",
-			url:"/fuwebapp/index.php/Home/Commodity/buyNowButton",
+			url:"/foruMobile/index.php/Home/Commodity/buyNowButton",
 			data:{order_count:$count,food_id:$food_id},
 			success:function(result){
 				if (result['result'] != 0) {
 				
-					var $href = "/fuwebapp/index.php/Home/ShoppingCart/orderConfirm?orderIds="+result['order_id'];
+					var $href = "/foruMobile/index.php/Home/ShoppingCart/orderconfirm?orderIds="+result['order_id'];
 					window.location.href=$href;
 				}
 				else {

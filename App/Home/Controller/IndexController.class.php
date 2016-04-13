@@ -35,7 +35,7 @@ class IndexController extends Controller {
         $this->display();
     }
 	
-	public function selectCampus() {
+	public function selectcampus() {
 
 		$city = M('city');
 		$cityList = $city->select();
@@ -44,7 +44,7 @@ class IndexController extends Controller {
 		$this->assign("cityList",$cityList)
 			 ->assign("campusList",$campusList);
 			 
-		$this->display("selectCampus");
+		$this->display("selectcampus");
 	}
 
 	public function getCampusByid($city_id) {

@@ -13,7 +13,7 @@ $(document).ready(function(){
 		var rank = $(this).attr("data-rank");
 
 		$.ajax({
-			url:'/fuwebapp/index.php/Home/Person/deleteAdress',
+			url:'/foruMobile/index.php/Home/Person/deleteAdress',
 			type:'POST',
 			data:{
 				rank:rank

@@ -6,13 +6,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		
-		<link href="/fuwebapp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/commonstyle.css" />
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/style.css" />
+		<link href="/foruMobile/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/commonstyle.css" />
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/style.css" />
 
-		<script type="text/javascript" src="/fuwebapp/Public/script/plugins/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="/foruMobile/Public/script/plugins/jquery-1.11.2.js"></script>
 
-		<script src="/fuwebapp/Public/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/foruMobile/Public/bootstrap/js/bootstrap.min.js"></script>
 	</head>
 	<body>
 		<div id="homepage-head">
@@ -23,7 +23,7 @@
 			<div class="head-bottom">
 				<dl>
 					<dt>
-						<img src="/fuwebapp/Public/img/userhead.png" alt="">
+						<img src="/foruMobile/Public/img/userhead.png" alt="">
 					</dt>
 					<dd>
 						点击登录
@@ -36,7 +36,7 @@
 			   <div class="col-xs-3">
 			   		<dl>
 			   			<dt>
-			   				<img src="/fuwebapp/Public/img/icon/locationmanage.png" alt="">
+			   				<img src="/foruMobile/Public/img/icon/locationmanage.png" alt="">
 			   			</dt>
 			   			<dd>地址管理</dd>
 			   		</dl>
@@ -44,7 +44,7 @@
 			   <div class="col-xs-3">
 			   		<dl>
 			   			<dt>
-			   				<img src="/fuwebapp/Public/img/icon/ordermanage.png" alt="">
+			   				<img src="/foruMobile/Public/img/icon/ordermanage.png" alt="">
 			   			</dt>
 			   			<dd>订单管理</dd>
 			   		</dl>
@@ -52,7 +52,7 @@
 			   <div class="col-xs-3">
 			   		<dl>
 			   			<dt>
-			   				<img src="/fuwebapp/Public/img/icon/userinfo.png" alt="">
+			   				<img src="/foruMobile/Public/img/icon/userinfo.png" alt="">
 			   			</dt>
 			   			<dd>个人信息</dd>
 			   		</dl>
@@ -60,7 +60,7 @@
 			    <div class="col-xs-3">
 			   		<dl>
 			   			<dt>
-			   				<img src="/fuwebapp/Public/img/icon/settings.png" alt="">
+			   				<img src="/foruMobile/Public/img/icon/settings.png" alt="">
 			   			</dt>
 			   			<dd>设置</dd>
 			   		</dl>

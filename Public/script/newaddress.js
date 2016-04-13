@@ -59,7 +59,7 @@ $(document).ready(function(){
 		var rank = $(this).attr("data-rank");
         
 		$.ajax({
-			url:"/fuwebapp/index.php/Home/Person/setDefaultAddress",
+			url:"/foruMobile/index.php/Home/Person/setDefaultAddress",
 			type:'POST',
 			data:{
 				rank:rank
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 	$("#city-nav li").click(function(){
 		$.ajax({
-			url:"/fuwebapp/index.php/Home/Index/getCampusByid",
+			url:"/foruMobile/index.php/Home/Index/getCampusByid",
 			type:"POST",
 			data:{
 				city_id:$(this).attr('data-id')

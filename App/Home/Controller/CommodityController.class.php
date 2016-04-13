@@ -125,7 +125,7 @@ class CommodityController extends Controller {
     		$this->display('comment');
     	}
     	else {
-    		$this->redirect('Home/OrderManage/orderManage',array('status'=>'4'));
+    		$this->redirect('Home/OrderManage/ordermanage',array('status'=>'4'));
     	}
     }
 
@@ -178,7 +178,7 @@ class CommodityController extends Controller {
             $commentInfo[$i]['nickname']    = $userInfo['nickname'];
 
             if ($commentInfo[$i]['is_hidden'] != 0) {
-                $commentInfo[$i]['img_url']     = '/fuwebapp/Public/img/userhead.png';
+                $commentInfo[$i]['img_url']     = '/foruMobile/Public/img/userhead.png';
             }
             else {
                 $commentInfo[$i]['img_url']     = $userInfo['img_url'];

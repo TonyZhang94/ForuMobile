@@ -6,9 +6,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		
-		<link href="/fuwebapp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/commonstyle.css" />
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/style.css" />
+		<link href="/foruMobile/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/commonstyle.css" />
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/style.css" />
 	</head>
 	<body>
 		<div class="head-top">
@@ -26,7 +26,7 @@
 			   		<div class="user-info-input">
 			   			<span class="fl">关于我们</span>
 			   			<span class="fr">
-							<img class="forward-arrow"  src="/fuwebapp/Public/img/icon/forwardarrow.jpg" alt="">
+							<img class="forward-arrow"  src="/foruMobile/Public/img/icon/forwardarrow.jpg" alt="">
 			   			</span>
 			   		</div>
 			   	</a>	
@@ -34,7 +34,7 @@
 			   		<div class="user-info-input">
 			   			<span class="fl">修改密码</span>
 			   			<span class="fr">
-			   				<img class="forward-arrow"  src="/fuwebapp/Public/img/icon/forwardarrow.jpg" alt="">
+			   				<img class="forward-arrow"  src="/foruMobile/Public/img/icon/forwardarrow.jpg" alt="">
 			   			</span>
 			   		</div>
 			   	</a>
@@ -79,8 +79,8 @@
 	</div>
 </div> -->
 
-		<script type="text/javascript" src="/fuwebapp/Public/script/plugins/jquery-1.11.2.js"></script>
-		<script src="/fuwebapp/Public/bootstrap/js/bootstrap.min.js"></script>
-		<script src="/fuwebapp/Public/script/common.js"></script>
+		<script type="text/javascript" src="/foruMobile/Public/script/plugins/jquery-1.11.2.js"></script>
+		<script src="/foruMobile/Public/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/foruMobile/Public/script/common.js"></script>
 	</body>
 </html>

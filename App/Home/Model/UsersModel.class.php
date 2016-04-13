@@ -45,7 +45,7 @@ class UsersModel extends Model{
 		if (!isset($_SESSION['username'])) {
 			$info = array(
 				'nickname' => '点击登陆',
-				'img_url'  => '/fuwebapp/Public/img/userhead.png'
+				'img_url'  => '/foruMobile/Public/img/userhead.png'
 				);
 		}
 		else {
@@ -63,7 +63,7 @@ class UsersModel extends Model{
 						 ->find();
 
 			if ($info['img_url'] == null) {
-				$info['img_url'] = '/fuwebapp/Public/img/userhead.png';
+				$info['img_url'] = '/foruMobile/Public/img/userhead.png';
 			}
 
 		}
@@ -82,7 +82,7 @@ class UsersModel extends Model{
 					 ->find();
 
 		if ($info['img_url'] == null) {
-			$info['img_url'] = '/fuwebapp/Public/img/userhead.png';
+			$info['img_url'] = '/foruMobile/Public/img/userhead.png';
 		}
 
 		return $info;

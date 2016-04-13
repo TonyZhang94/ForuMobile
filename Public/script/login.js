@@ -44,7 +44,7 @@ function login() {
 		},
 		success : function(data) {		
 			if(data.status=='success'){
-                    window.location.href="/fuwebapp/index.php";
+                    window.location.href="/foruMobile/index.php";
          		}else{
          			 $('.error-message').text(data.message);
 		 			 $(".error-message-wrapper") .slideDown(150);  

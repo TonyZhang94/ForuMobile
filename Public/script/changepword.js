@@ -4,7 +4,7 @@ $(document).ready(function(){
 			"pre-password":{
 				required:true,
 				maxlength:10,
-				remote:"/fuwebapp/index.php/Home/Person/resetPassword"
+				remote:"/foruMobile/index.php/Home/Person/resetPassword"
 			},
 			"new-password":{
 				required:true,

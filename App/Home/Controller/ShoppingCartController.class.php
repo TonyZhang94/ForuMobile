@@ -23,10 +23,10 @@ class ShoppingCartController extends Controller{
 	}
 
 	public function index(){
-        $this->ShoppingCart();
+        $this->shoppingcart();
     }
 
-    public function ShoppingCart(){
+    public function shoppingcart(){
         $campusId = $_SESSION['campusId'];
         if($campusId == null){
             $campusId = 1;
@@ -67,7 +67,7 @@ class ShoppingCartController extends Controller{
         }
     }
 
-    public function orderConfirm(){
+    public function orderconfirm(){
         $campusId = $_SESSION['campusId'];
         if($campusId == null){
             $campusId = 1;
@@ -89,7 +89,7 @@ class ShoppingCartController extends Controller{
         $address = $Receiver->getAddressList();   //获取地址
 
         if($defaultAddress == false) {
-            $this->redirect('Home/Person/addressManage');
+            $this->redirect('Home/Person/addressmanage');
         }
         else if ($goodsInfo != false && $result !== false) {
             $this->assign('defaultAddress',$defaultAddress)
@@ -102,7 +102,7 @@ class ShoppingCartController extends Controller{
             $this->display('orderconfirm');
         }
         else {
-            $this->redirect('Home/ShoppingCart/ShoppingCart');
+            $this->redirect('Home/ShoppingCart/shoppingcart');
         }
     }
 

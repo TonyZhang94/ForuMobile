@@ -39,7 +39,7 @@ $(document).ready(function(){
 		    } 
 		}
 
-		window.location.href = "/fuwebapp/index.php/Home/Commodity/searchoutcome/key/"+searchkey;
+		window.location.href = "/foruMobile/index.php/Home/Commodity/searchoutcome/key/"+searchkey;
 	});
 
 	$("#search-input").focus(function(){
@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 		$(".search-history-item").click(function(){
 			$("#search-input").val($(this).text());
-			window.location.href = "/fuwebapp/index.php/Home/Commodity/searchoutcome/key/"+$(this).text();
+			window.location.href = "/foruMobile/index.php/Home/Commodity/searchoutcome/key/"+$(this).text();
 		});
 	});
 
@@ -79,7 +79,7 @@ $(document).ready(function(){
 
 	$(".search-history-item").click(function(){
 		$("#search-input").val($(this).text());
-		window.location.href = "/fuwebapp/index.php/Home/Commodity/searchoutcome/key/"+$(this).text();
+		window.location.href = "/foruMobile/index.php/Home/Commodity/searchoutcome/key/"+$(this).text();
 	});
 });
 

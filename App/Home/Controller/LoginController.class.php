@@ -97,11 +97,11 @@ class LoginController extends Controller {
     // @author Tony
     public function logout(){
       unset($_SESSION['username']);
-      $this->redirect('Home/Login/homePage');
+      $this->redirect('Home/Login/homepage');
     }
 
     // @author Tony
-    public function homePage(){
+    public function homepage(){
 
         $Users = D('Users');
         $info  = $Users->getUserInfo();

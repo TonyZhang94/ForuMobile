@@ -5,10 +5,10 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
 		<meta name="viewport" content="width=device-width,initial-scale=1" />	
-		<link href="/fuwebapp/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/commonstyle.css" />
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/style.css" />
-		<link type="text/css" rel="stylesheet" href="/fuwebapp/Public/css/style-y.css" />
+		<link href="/foruMobile/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/commonstyle.css" />
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="/foruMobile/Public/css/style-y.css" />
 		<style>
 			body{
 				background-color: #FAFAFA;
@@ -95,7 +95,7 @@
 	   		</a>
 	   </div>
 	    <div class="col-xs-4">
-	    	<a href="<?php echo U('Login/homepage');?>">
+	    	<a href="<?php echo U('Login/homePage');?>">
 		   		<dl>
 		   			<dt>
 		   				<span class="glyphicon glyphicon-user"></span>
@@ -107,9 +107,9 @@
 	</div>
 </div>
 		
-		<script type="text/javascript" src="/fuwebapp/Public/script/plugins/zepto.js"></script>
-		<script src="/fuwebapp/Public/script/common.js"></script>
-		<script src="/fuwebapp/Public/script/goodsclassify.js"></script>
+		<script type="text/javascript" src="/foruMobile/Public/script/plugins/zepto.js"></script>
+		<script src="/foruMobile/Public/script/common.js"></script>
+		<script src="/foruMobile/Public/script/goodsclassify.js"></script>
 	
 	</body>
 </html>

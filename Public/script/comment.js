@@ -41,7 +41,7 @@ $(document).ready(function(){
 
 		$.ajax({
 			type:"POST",
-			url:"/fuwebapp/index.php/Home/Commodity/postComment",
+			url:"/foruMobile/index.php/Home/Commodity/postComment",
 			data:{
 				food_id:food_id,
 				comment:mark,

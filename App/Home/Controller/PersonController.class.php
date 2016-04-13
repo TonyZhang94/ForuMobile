@@ -74,14 +74,14 @@ class PersonController extends Controller {
         }
     }
 
-    public function addressManage(){
+    public function addressmanage(){
     	$Receiver = D('Receiver');
      
         $address = $Receiver->getAddressList();   //获取地址
        
     	$this->assign('address',$address);
            
-    	$this->display('addressManage');
+    	$this->display('addressmanage');
     }
 
     public function newAddress(){
@@ -102,7 +102,7 @@ class PersonController extends Controller {
         $res = $Receiver->saveAddress();
 
         if ($res !== false) {
-            $this->redirect('Home/Person/addressManage');
+            $this->redirect('Home/Person/addressmanage');
         }
         else {
             // 新地址保存失败
@@ -148,7 +148,7 @@ class PersonController extends Controller {
         }
     }
 
-    public function changePWord(){
+    public function changepword(){
         $this->display('changepword');
     }
 
@@ -202,15 +202,15 @@ class PersonController extends Controller {
        $this->display();
    }
 
-   public function cqq(){
+   public function Cqq(){
       $this->display();
    }
 
-   public function cwechat(){
+   public function Cwechat(){
       $this->display();
    }
 
-   public function cacademy(){
+   public function Cacademy(){
      $this->display();
    }
 }

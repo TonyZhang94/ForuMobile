@@ -6,18 +6,18 @@ $(document).ready(function(){
 		
 		$.ajax({
 			type:"POST",
-			url:"/fuwebapp/index.php/Home/Person/infoSexRevise",
+			url:"/foruMobile/index.php/Home/Person/infoSexRevise",
 			data:info,
 			success:function(res){
 				if (res['result'] != 0)	{
 					var sex = $(".sex-none").val();
 
 					if (sex != 0) {
-						$(".revise-sex .fr").html('男'+'<img class="forward-arrow"  src="/fuwebapp/public/img/icon/forwardarrow.jpg" alt="">');
+						$(".revise-sex .fr").html('男'+'<img class="forward-arrow"  src="/foruMobile/public/img/icon/forwardarrow.jpg" alt="">');
 						$(".revise-sex .sex-none").attr("value","0")
 					}
 					else {
-						$(".revise-sex .fr").html("女"+'<img class="forward-arrow"  src="/fuwebapp/public/img/icon/forwardarrow.jpg" alt="">');
+						$(".revise-sex .fr").html("女"+'<img class="forward-arrow"  src="/foruMobile/public/img/icon/forwardarrow.jpg" alt="">');
 						$(".revise-sex .sex-none").attr("value","1")
 					}
 				}
@@ -36,7 +36,7 @@ function getInfo(field){
 
 	$.ajax({
 		type:"POST",
-		url:"/fuwebapp/index.php/Home/Person/getUserInfo",
+		url:"/foruMobile/index.php/Home/Person/getUserInfo",
 		data:info,
 		success:function(info){
 			if (info['result'] !=0) {

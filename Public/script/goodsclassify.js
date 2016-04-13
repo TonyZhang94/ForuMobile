@@ -32,7 +32,7 @@ $(document).ready(function(){
 	// 	$(this).addClass("active");
 	// 	$.ajax({
 	// 		type:"POST",
-	// 		url:"/fuwebapp/index.php/Home/Commodity/getGatGoods",
+	// 		url:"/foruMobile/index.php/Home/Commodity/getGatGoods",
 	// 		data:{
 	// 			categoryId:$(this).attr("data-id")
 	// 		},
